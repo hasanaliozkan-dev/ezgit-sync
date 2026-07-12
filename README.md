@@ -1,4 +1,4 @@
-# auto_git
+# ezgit-sync
 
 ![PyPI version](https://img.shields.io/pypi/v/autogit.svg)
 
@@ -28,13 +28,16 @@ Docs deploy automatically on push to `main` via GitHub Actions. To enable this, 
 
 To set up for local development:
 
-```bash
+```sh
 # Clone your fork
 git clone git@github.com:your_username/autogit.git
 cd autogit
 
-# Install in editable mode with live updates
-uv tool install --editable .
+# Install dependencies
+uv sync
+
+# Create a branch for development
+git checkout -b feature/new-awesome-feature
 ```
 
 This installs the CLI globally but with live updates - any changes you make to the source code are immediately available when you run `autogit`.

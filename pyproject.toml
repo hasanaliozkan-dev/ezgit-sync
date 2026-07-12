@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "autogit"
+name = "ezgit-sync"
 version = "0.1.0"
 description = "This package is a basic git automator for deep learning and machine learning tasks."
 readme = "README.md"
@@ -54,7 +54,8 @@ homepage = "https://github.com/hasanaliozkan-dev/autogit"
 
 [project.scripts]
 autogit = "autogit.cli:main"
-
+[tool.hatch.build.targets.wheel]
+packages = ["src/autogit"]
 [tool.ty]
 # All rules are enabled as "error" by default; no need to specify unless overriding.
 # Example override: relax a rule for the entire project (uncomment if needed).

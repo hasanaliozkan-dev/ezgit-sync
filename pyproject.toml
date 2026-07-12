@@ -53,7 +53,7 @@ documentation = "https://hasanaliozkan-dev.github.io/autogit/"
 homepage = "https://github.com/hasanaliozkan-dev/autogit"
 
 [project.scripts]
-autogit = "autogit.cli:app"
+autogit = "autogit.cli:main"
 
 [tool.ty]
 # All rules are enabled as "error" by default; no need to specify unless overriding.

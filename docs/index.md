@@ -1,9 +1,9 @@
-# auto_git
+# ezgit-sync
 
-This package is a basic git automator for deep learning and machine learning tasks.
+A simple command-line tool to automate your daily Git workflow. `ezgit-sync` pulls remote changes, commits your local work, and pushes everything in a single command.
 
 ## Getting started
 
-- [Installation](installation.md) - how to install auto_git
-- [Usage](usage.md) - how to use auto_git
+- Installation - how to install ezgit-sync
+- Usage - how to use ezgit-sync
 - [API Reference](api.md) - auto-generated API documentation

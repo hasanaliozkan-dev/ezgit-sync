@@ -53,9 +53,9 @@ documentation = "https://hasanaliozkan-dev.github.io/ezgit-sync/"
 homepage = "https://github.com/hasanaliozkan-dev/ezgit-sync"
 
 [project.scripts]
-ezgit-sync = "autogit.cli:main"
+ezgit-sync = "ezgit-sync.cli:main"
 [tool.hatch.build.targets.wheel]
-packages = ["src/autogit"]
+packages = ["src/ezgit-sync"]
 [tool.ty]
 # All rules are enabled as "error" by default; no need to specify unless overriding.
 # Example override: relax a rule for the entire project (uncomment if needed).

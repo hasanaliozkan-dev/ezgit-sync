@@ -1,4 +1,4 @@
-"""Console script for autogit."""
+"""Console script for ezgit-sync."""
 
 from __future__ import annotations
 
@@ -6,7 +6,7 @@ import argparse
 import sys
 from pathlib import Path
 
-from autogit.autogit import (
+from ezgit-sync.ezgit-sync import (
     get_current_branch,
     has_local_changes,
     log_error,
@@ -19,7 +19,7 @@ from autogit.autogit import (
 
 
 def main(argv: list[str] | None = None) -> int:
-    """Console script for autogit."""
+    """Console script for ezgit-sync."""
     parser = argparse.ArgumentParser(
         description="Pull remote updates, stage, commit, and push the current repository to GitHub."
     )

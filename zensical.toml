@@ -1,8 +1,8 @@
 [project]
 site_name = "auto_git"
-site_url = "https://hasanaliozkan-dev.github.io/autogit/"
-repo_url = "https://github.com/hasanaliozkan-dev/autogit"
-repo_name = "hasanaliozkan-dev/autogit"
+site_url = "https://hasanaliozkan-dev.github.io/ezgit-sync/"
+repo_url = "https://github.com/hasanaliozkan-dev/ezgit-sync"
+repo_name = "hasanaliozkan-dev/ezgit-sync"
 
 nav = [
   { "Home" = "index.md" },

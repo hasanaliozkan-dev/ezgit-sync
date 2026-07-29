@@ -1,8 +1,8 @@
-"""Tests for `autogit` package."""
+"""Tests for `ezgit-sync` package."""
 
-import autogit
+import ezgit-sync
 
 
 def test_import():
     """Verify the package can be imported."""
-    assert autogit
+    assert ezgit-sync

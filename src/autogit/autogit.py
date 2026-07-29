@@ -1,4 +1,4 @@
-"""Main module for autogit."""
+"""Main module for ezgit-sync."""
 
 from __future__ import annotations
 

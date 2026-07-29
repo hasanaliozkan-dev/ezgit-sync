@@ -1,4 +1,4 @@
-# Justfile for autogit
+# Justfile for ezgit-sync
 
 # Show available commands
 list:

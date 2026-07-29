@@ -1,6 +1,9 @@
 ![PyPI version](https://img.shields.io/pypi/v/ezgit-sync.svg) [![License - MIT 3-Clause](https://img.shields.io/pypi/l/ezgit-sync.svg)](https://github.com/hasanaliozkan-dev/ezgit-sync/blob/main/LICENSE) [![PyPI Downloads](https://static.pepy.tech/badge/ezgit-sync?label=PyPI%20Downloads)](https://pepy.tech/projects/ezgit-sync) ![Visitors](https://visitor-badge.laobi.icu/badge?page_id=hasanaliozkan-dev/ezgit-sync)
 
 
+![PyPI version](https://img.shields.io/pypi/v/ezgit-sync.svg) [![License - MIT 3-Clause](https://img.shields.io/pypi/l/ezgit-sync.svg)](https://github.com/hasanaliozkan-dev/ezgit-sync/blob/main/LICENSE) [![PyPI Downloads](https://static.pepy.tech/badge/ezgit-sync?label=PyPI%20Downloads)](https://pepy.tech/projects/ezgit-sync) ![Visitors](https://visitor-badge.laobi.icu/badge?page_id=hasanaliozkan-dev/ezgit-sync)
+
+
 # ezgit-sync
 ```
   ___ ______ _(_) |_      ___ _   _ _ __   ___ 

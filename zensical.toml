@@ -1,15 +1,10 @@
 [project]
-site_name = "auto_git"
+site_name = "ezgit-sync"
 site_url = "https://hasanaliozkan-dev.github.io/ezgit-sync/"
 repo_url = "https://github.com/hasanaliozkan-dev/ezgit-sync"
 repo_name = "hasanaliozkan-dev/ezgit-sync"
 
-nav = [
-  { "Home" = "index.md" },
-  { "Installation" = "installation.md" },
-  { "Usage" = "usage.md" },
-  { "API Reference" = "api.md" },
-]
+nav = [{ "Home" = "README.md" }]
 
 [[project.theme.palette]]
 media = "(prefers-color-scheme: light)"

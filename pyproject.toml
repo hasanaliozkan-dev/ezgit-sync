@@ -4,8 +4,8 @@ build-backend = "hatchling.build"
 
 [project]
 name = "ezgit-sync"
-version = "0.1.2"
-description = "This package is a basic git automator for deep learning and machine learning tasks."
+version = "0.1.3"
+description = "Designed for data scientists and ML/DL practitioners, this library automates routine Git operations to accelerate your development cycle."
 readme = "README.md"
 authors = [
   {name = "Hasan Ali Özkan", email = "hasanaliozkan@mu.edu.tr"}

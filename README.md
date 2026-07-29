@@ -1,10 +1,10 @@
 # ezgit-sync
 
-![PyPI version](https://img.shields.io/pypi/v/autogit.svg)
+![PyPI version](https://img.shields.io/pypi/v/ezgit-sync.svg)
 
 This package is a basic git automator for deep learning and machine learning tasks.
 
-* [GitHub](https://github.com/hasanaliozkan-dev/autogit/) | [PyPI](https://pypi.org/project/autogit/) | [Documentation](https://hasanaliozkan-dev.github.io/autogit/)
+* [GitHub](https://github.com/hasanaliozkan-dev/ezgit-sync/) | [PyPI](https://pypi.org/project/ezgit-sync/) | [Documentation](https://hasanaliozkan-dev.github.io/ezgit-sync/)
 * Created by [Hasan Ali Özkan](https://hasanaliozkan-dev.github.io/) | GitHub [@hasanaliozkan-dev](https://github.com/hasanaliozkan-dev) | PyPI [@hasanaliozkan](https://pypi.org/user/hasanaliozkan/)
 * MIT License
 
@@ -16,7 +16,7 @@ This package is a basic git automator for deep learning and machine learning tas
 
 Documentation is built with [Zensical](https://zensical.org/) and deployed to GitHub Pages.
 
-* **Live site:** https://hasanaliozkan-dev.github.io/autogit/
+* **Live site:** https://hasanaliozkan-dev.github.io/ezgit-sync/
 * **Preview locally:** `just docs-serve` (serves at http://localhost:8000)
 * **Build:** `just docs-build`
 
@@ -30,8 +30,8 @@ To set up for local development:
 
 ```sh
 # Clone your fork
-git clone git@github.com:your_username/autogit.git
-cd autogit
+git clone git@github.com:your_username/ezgit-sync.git
+cd ezgit-sync
 
 # Install dependencies
 uv sync

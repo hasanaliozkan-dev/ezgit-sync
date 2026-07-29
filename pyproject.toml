@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "ezgit-sync"
-version = "0.1.0"
+version = "0.1.2"
 description = "This package is a basic git automator for deep learning and machine learning tasks."
 readme = "README.md"
 authors = [
@@ -47,13 +47,13 @@ docs = [
 ]
 
 [project.urls]
-bugs = "https://github.com/hasanaliozkan-dev/autogit/issues"
-changelog = "https://github.com/hasanaliozkan-dev/autogit/releases"
-documentation = "https://hasanaliozkan-dev.github.io/autogit/"
-homepage = "https://github.com/hasanaliozkan-dev/autogit"
+bugs = "https://github.com/hasanaliozkan-dev/ezgit-sync/issues"
+changelog = "https://github.com/hasanaliozkan-dev/ezgit-sync/releases"
+documentation = "https://hasanaliozkan-dev.github.io/ezgit-sync/"
+homepage = "https://github.com/hasanaliozkan-dev/ezgit-sync"
 
 [project.scripts]
-autogit = "autogit.cli:main"
+ezgit-sync = "autogit.cli:main"
 [tool.hatch.build.targets.wheel]
 packages = ["src/autogit"]
 [tool.ty]

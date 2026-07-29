@@ -2,7 +2,7 @@
 
 ## Reporting a Vulnerability
 
-If you find a security vulnerability in auto_git, please report it through [GitHub's private vulnerability reporting](https://github.com/hasanaliozkan-dev/autogit/security/advisories/new). This keeps the details private while we work on a fix.
+If you find a security vulnerability in ezgit-sync, please report it through GitHub's private vulnerability reporting. This keeps the details private while we work on a fix.
 
 Please include:
 

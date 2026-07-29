@@ -2,10 +2,10 @@
 
 ## Stable release
 
-To install auto_git, run this command in your terminal:
+To install ezgit-sync, run this command in your terminal:
 
 ```sh
-uv add autogit
+uv add ezgit-sync
 ```
 
 Or if you prefer to use `pip`:

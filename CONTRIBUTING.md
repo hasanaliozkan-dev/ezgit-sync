@@ -8,7 +8,7 @@ You can contribute in many ways:
 
 ### Report Bugs
 
-Report bugs at https://github.com/hasanaliozkan-dev/autogit/issues.
+Report bugs at https://github.com/hasanaliozkan-dev/ezgit-sync/issues.
 
 If you are reporting a bug, please include:
 
@@ -26,7 +26,7 @@ Look through the GitHub issues for features. Anything tagged with "enhancement" 
 
 ### Write Documentation
 
-auto_git could always use more documentation, whether as part of the official docs, in docstrings, or even on the web in blog posts, articles, and such.
+ezgit-sync could always use more documentation, whether as part of the official docs, in docstrings, or even on the web in blog posts, articles, and such.
 
 To preview the docs locally:
 
@@ -38,7 +38,7 @@ This starts a local server at http://localhost:8000 with live reload. Edit files
 
 ### Submit Feedback
 
-The best way to send feedback is to file an issue at https://github.com/hasanaliozkan-dev/autogit/issues.
+The best way to send feedback is to file an issue at https://github.com/hasanaliozkan-dev/ezgit-sync/issues.
 
 If you are proposing a feature:
 
@@ -48,19 +48,19 @@ If you are proposing a feature:
 
 ## Get Started!
 
-Ready to contribute? Here's how to set up autogit for local development.
+Ready to contribute? Here's how to set up ezgit-sync for local development.
 
-1. Fork the autogit repo on GitHub.
+1. Fork the ezgit-sync repo on GitHub.
 2. Clone your fork locally:
 
    ```sh
-   git clone git@github.com:your_name_here/autogit.git
+   git clone git@github.com:your_name_here/ezgit-sync.git
    ```
 
 3. Install your local copy with uv:
 
    ```sh
-   cd autogit/
+   cd ezgit-sync/
    uv sync
    ```
 

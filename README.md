@@ -1,4 +1,4 @@
-![PyPI version](https://img.shields.io/pypi/v/ezgit-sync.svg) [![License - MIT 3-Clause](https://img.shields.io/pypi/l/ezgit-sync.svg)](https://github.com/hasanaliozkan-dev/ezgit-sync/blob/main/LICENSE) [![PyPI Downloads](https://static.pepy.tech/badge/ezgit-sync?label=PyPI%20Downloads)](https://pepy.tech/projects/ezgit-sync) ![Visitors](https://visitor-badge.laobi.icu/badge?page_id=hasanaliozkan-dev/ezgit-sync)
+![PyPI version](https://img.shields.io/pypi/v/ezgit-sync.svg) [![License: MIT](https://img.shields.io/pypi/l/ezgit-sync.svg)](https://github.com/hasanaliozkan-dev/ezgit-sync/blob/main/LICENSE) [![PyPI Downloads](https://static.pepy.tech/badge/ezgit-sync?label=PyPI%20Downloads)](https://pepy.tech/projects/ezgit-sync) ![Visitors](https://visitor-badge.laobi.icu/badge?page_id=hasanaliozkan-dev/ezgit-sync)
 
 
 # ezgit-sync
@@ -16,15 +16,16 @@ Designed for data scientists and ML/DL practitioners, this library automates rou
 
 ### Features
 
-*   **Automated Git Workflow**: Pulls remote changes, commits local work, and pushes to the remote repository in a single command.
+*   **Automated Git Workflow**: Commits your local work, rebases it onto the latest remote changes, and pushes it, all in a single command.
 *   **Branch Awareness**: Automatically detects and operates on your current Git branch.
-*   **Intelligent Syncing**: Checks for local modifications before committing and avoids unnecessary operations if there's nothing to sync.
+*   **Intelligent Syncing**: Only commits when something changed, still pushes commits left behind by an earlier failed push, and creates new branches on the remote on their first sync.
 *   **Custom Commit Messages**: Specify a commit message for your sync via the command line.
-*   **User-Friendly Logging**: Provides clear, color-coded terminal output for success, warnings, and info.
-*   **Detailed Error Handling**: Offers descriptive error messages with common reasons and suggested solutions to help you troubleshoot quickly.
+*   **User-Friendly Logging**: Provides clear, color-coded terminal output for success, warnings, and info (plain text when piped or when `NO_COLOR` is set).
+*   **Detailed Error Handling**: Offers descriptive error messages with common reasons, suggested solutions, and Git's own output. A conflicting pull is rolled back so your work stays committed locally.
+*   **No dependencies**: Only needs Python 3.10+ and Git.
 
 ### Installation
-You can install ezgit-sync directly from PyPI using standard package managers:
+ezgit-sync needs Python 3.10 or newer and Git. Install it from PyPI:
 
 ```bash
 pip install ezgit-sync
@@ -136,7 +137,15 @@ uv sync
 
 # Create a branch for development
 git checkout -b feature/new-awesome-feature
+
+# Format, lint, type-check and test (needs just: https://github.com/casey/just)
+just qa
+
+# Run a single test
+just test tests/test_ezgit_sync.py::test_cli_full_sync
 ```
+
+The tests create throwaway Git repositories in a temporary folder, so Git must be installed. See [CONTRIBUTING.md](https://github.com/hasanaliozkan-dev/ezgit-sync/blob/main/CONTRIBUTING.md) for details and [CHANGELOG/](https://github.com/hasanaliozkan-dev/ezgit-sync/blob/main/CHANGELOG/) for release notes.
 
 ### Author
 ezgit-sync was created in 2026 by Hasan Ali Özkan.

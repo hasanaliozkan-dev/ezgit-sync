@@ -46,6 +46,10 @@ uv pip install ezgit-sync
 Stages all current modifications (git add -A), creates a commit with the provided message, and pushes the commits to the remote branch.
 
 ```python
+from pathlib import Path
+
+from ezgit_sync import sync_local_changes
+
 try:
     sync_local_changes(Path("."), "main", "Automated model weights update")
     print("Sync complete!")
@@ -54,47 +58,69 @@ except Exception:
 ```
 ##### CLI Usage
 ```bash
-ezgit-sync
+ezgit-sync -m "Update ResNet training script"
 ```
 Under the hood, this will:
  * Verify you are in a Git repository (verify_git_repository).
  * Identify your current branch (get_current_branch).
- * Pull the latest remote changes (pull_remote_changes).
- * Stage all local modifications (has_local_changes).
-Commit with a default message (e.g., "Auto-sync via ezgit-sync") and push to the remote (sync_local_changes).
+ * Stage and commit all local modifications (has_local_changes, commit_local_changes). Without `-m` the message is "Auto-sync via ezgit-sync".
+ * Rebase your commits onto the latest remote changes (pull_remote_changes). A branch that doesn't exist on origin yet is skipped here and created by the push.
+ * Push to origin (push_changes). Commits left over from an earlier failed push are pushed too (has_unpushed_commits).
+
+If your changes conflict with the remote, the rebase is aborted and your commit stays safely on your machine; resolve the conflict with `git pull --rebase` and run ezgit-sync again.
+
+> **Note:** ezgit-sync stages everything with `git add -A`. Make sure large datasets, model weights and secrets such as `.env` files are listed in your `.gitignore` before syncing.
+
+Colors are shown only when writing to a terminal; set `NO_COLOR=1` to turn them off.
 
 
 ##### Complete Workflow Example
 ```python
 from pathlib import Path
 
+from ezgit_sync import (
+    commit_local_changes,
+    get_current_branch,
+    has_local_changes,
+    has_unpushed_commits,
+    log_info,
+    log_success,
+    pull_remote_changes,
+    push_changes,
+    verify_git_repository,
+)
+
+
 def run_ezgit_sync(message: str = "Automated sync"):
     repo_root = Path.cwd()
-    
+
     # 1. Ensure we are in a Git repository
     if not verify_git_repository(repo_root):
         return
 
-    # 2. Get the current branch
     try:
+        # 2. Get the current branch
         branch = get_current_branch(repo_root)
-    except Exception:
-        return
 
-    # 3. Pull latest changes to avoid conflicts
-    if not pull_remote_changes(repo_root, branch):
-        return
+        # 3. Commit local work first so pulling can't clash with it
+        committed = has_local_changes(repo_root)
+        if committed:
+            commit_local_changes(repo_root, message)
 
-    # 4. Check for local changes and push if necessary
-    if has_local_changes(repo_root):
-        try:
-            sync_local_changes(repo_root, branch, message)
+        # 4. Rebase onto the latest remote changes
+        if not pull_remote_changes(repo_root, branch):
+            return
+
+        # 5. Push if there is anything new
+        if committed or has_unpushed_commits(repo_root):
+            push_changes(repo_root, branch)
             log_success(f"Successfully synced branch '{branch}'!")
-        except Exception:
-            # The function already logged the specific error
-            pass
-    else:
-        log_info("Everything is up-to-date. Nothing to commit.")
+        else:
+            log_info("Everything is up-to-date. Nothing to commit.")
+    except Exception:
+        # Each step has already logged the specific error
+        pass
+
 
 # Execute the workflow
 run_ezgit_sync(message="Update ResNet training script")

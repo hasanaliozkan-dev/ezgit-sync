@@ -1,11 +1,12 @@
 # /// script
-# requires-python = ">=3.10"
+# requires-python = ">=3.11"
 # ///
 """Tag the current version and create a GitHub release."""
 
 import subprocess
-import tomllib
 from pathlib import Path
+
+import tomllib
 
 
 def _run(*cmd: str) -> None:

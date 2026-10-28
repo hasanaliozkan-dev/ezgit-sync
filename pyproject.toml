@@ -19,10 +19,7 @@ classifiers = [
     "Typing :: Typed",
 ]
 license = {text = "MIT"}
-dependencies = [
-  "typer",
-  "rich",
-]
+dependencies = []
 requires-python = ">= 3.10"
 
 [dependency-groups]

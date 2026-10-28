@@ -1,6 +1,6 @@
 # Usage
 
-To use auto_git in a project:
+To use ezgit-sync in a project:
 
 ```python
 import ezgit_sync

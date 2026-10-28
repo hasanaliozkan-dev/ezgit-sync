@@ -6,10 +6,10 @@ import argparse
 import sys
 from pathlib import Path
 
-from ezgit-sync.ezgit-sync import (
+from ezgit_sync.autogit import (
     get_current_branch,
     has_local_changes,
-    log_error,
+    log_error_with_reasons,
     log_success,
     log_warning,
     pull_remote_changes,
@@ -33,7 +33,6 @@ def main(argv: list[str] | None = None) -> int:
     repo_root = Path.cwd()
 
     if not verify_git_repository(repo_root):
-        log_error(f"The current directory '{repo_root}' is not a valid Git repository.")
         return 1
 
     try:
@@ -52,7 +51,7 @@ def main(argv: list[str] | None = None) -> int:
         return 0
 
     except Exception as exc:
-        log_error(f"An error occurred during synchronization: {exc}")
+        log_error_with_reasons("An error occurred during synchronization.", [str(exc)])
         return 1
 
 app = main

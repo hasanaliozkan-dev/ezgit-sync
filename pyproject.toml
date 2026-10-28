@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "ezgit-sync"
-version = "0.1.3"
+version = "0.1.4"
 description = "Designed for data scientists and ML/DL practitioners, this library automates routine Git operations to accelerate your development cycle."
 readme = "README.md"
 authors = [
@@ -23,7 +23,7 @@ dependencies = [
   "typer",
   "rich",
 ]
-requires-python = ">= 3.12"
+requires-python = ">= 3.10"
 
 [dependency-groups]
 dev = [
@@ -53,9 +53,9 @@ documentation = "https://hasanaliozkan-dev.github.io/ezgit-sync/"
 homepage = "https://github.com/hasanaliozkan-dev/ezgit-sync"
 
 [project.scripts]
-ezgit-sync = "ezgit-sync.cli:main"
+ezgit-sync = "ezgit_sync.cli:main"
 [tool.hatch.build.targets.wheel]
-packages = ["src/ezgit-sync"]
+packages = ["src/ezgit_sync"]
 [tool.ty]
 # All rules are enabled as "error" by default; no need to specify unless overriding.
 # Example override: relax a rule for the entire project (uncomment if needed).
